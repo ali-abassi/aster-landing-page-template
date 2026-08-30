@@ -1,0 +1,11 @@
+.DS_Store
+
+# Keep the optimized alpha assets in the reusable repository; retain the
+# larger generation masters locally.
+assets/*.png
+
+# QA iterations. The two final proof captures remain versioned.
+evidence/current-desktop-screen.png
+evidence/desktop-hero.png
+evidence/desktop-hero-fixed.png
+evidence/desktop-hero-final.png
