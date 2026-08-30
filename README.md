@@ -16,7 +16,7 @@ A reusable marketing homepage built around layered alpha artwork and restrained 
 | **Product proof** | A deterministic dashboard mockup in pure HTML/CSS — no screenshots to re-render when your copy changes |
 | **Six feature cards** | A 3×2 grid of tinted panels, each holding an original CSS/SVG product stage above its name and description |
 | **Comparison table** | Three-column positioning grid, horizontally scrollable on mobile |
-| **Reviews, FAQ, closing CTA** | Twelve-review masonry wall, keyboard-operable `<details>` accordion, starfield close |
+| **Reviews, FAQ, closing CTA** | Twelve reviews as social-post cards (avatar, verified tick, stars, date/country) in a masonry wall with a floating count pill; keyboard-operable `<details>` accordion; starfield close |
 | **Responsive nav** | Full links on desktop, an accessible dropdown menu below 1000px |
 
 Accessibility: skip link, visible focus rings, `prefers-reduced-motion` honoured throughout, no decorative controls in the tab order, and no meaning carried only by imagery.
