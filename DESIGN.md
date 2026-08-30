@@ -40,6 +40,10 @@ For curious people facing an uncertain next step, Aster feels like a warm observ
 
 ## High-impact system
 
+### Source artwork
+
+The three hero panoramas were generated with OpenAI's image generation, prompted for transparent-background (alpha) plates rather than one flat picture — a separate plate per depth plane (horizon, midground, foreground). The parallax only reads as depth because the plates are separable and carry real transparency; a single generated image cannot produce the see-through relationship between near foliage and distant mountains. Masters are kept locally as PNG and shipped as WebP.
+
 ### Composition and responsive behavior
 
 - Hero reading order: navigation → eyebrow → headline → support → action → landscape → proof.
