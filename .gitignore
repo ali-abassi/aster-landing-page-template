@@ -1,15 +1,9 @@
 .DS_Store
+node_modules/
 
-# Keep the optimized alpha assets in the reusable repository; retain the
-# larger generation masters locally.
+# Keep the optimized alpha masters in the repository; the much larger
+# generation masters stay local.
 assets/*.png
 
-# QA iterations. The two final proof captures remain versioned.
-evidence/current-desktop-screen.png
-evidence/desktop-hero.png
-evidence/desktop-hero-fixed.png
-evidence/desktop-hero-final.png
-evidence/v2-*.png
-evidence/v3-*.png
-evidence/final-*.png
-evidence/reference-*.png
+# Evidence is committed as compressed JPEG. Raw captures stay local.
+evidence/*.png

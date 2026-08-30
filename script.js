@@ -39,6 +39,31 @@
 
   document.querySelectorAll('[data-reveal]').forEach((element) => revealObserver.observe(element));
 
+  const navToggle = document.querySelector('[data-nav-toggle]');
+  const navShell = document.querySelector('.nav-shell');
+
+  function setNav(open) {
+    if (!navToggle || !navShell) return;
+    navShell.classList.toggle('nav-open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+
+  navToggle?.addEventListener('click', () => {
+    setNav(navToggle.getAttribute('aria-expanded') !== 'true');
+  });
+
+  // Close on link choice, on Escape, and on any click outside the shell.
+  navShell?.querySelectorAll('.nav-links a').forEach((link) => link.addEventListener('click', () => setNav(false)));
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape' || navToggle?.getAttribute('aria-expanded') !== 'true') return;
+    setNav(false);
+    navToggle.focus();
+  });
+  document.addEventListener('click', (event) => {
+    if (navShell && !navShell.contains(event.target)) setNav(false);
+  });
+
   document.querySelectorAll('.faq details').forEach((item) => {
     item.addEventListener('toggle', () => {
       if (!item.open) return;

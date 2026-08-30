@@ -16,7 +16,7 @@ For curious people facing an uncertain next step, Aster feels like a warm observ
 
 | Exact URL | Observation | Use | Avoid / depart |
 |---|---|---|---|
-| https://unive.ai/ | Layered panoramic hero, restrained parallax, local proof scrim, deterministic dashboard, alternating feature worlds, comparison, reviews, FAQ, closing CTA. | Section rhythm, still-layer depth, evidence after emotion, purposeful warm palettes. | No Unive name, copy, school setting, people, logos, proprietary UI, or artwork. Aster uses an observatory world, different hierarchy, different product model, and original graphics. |
+| https://unive.ai/ | Rating pill above the headline; layered panoramic hero at ~94dvh; press row over the artwork; deterministic dashboard; six features as a 3x2 card grid (389x447 cards, tinted panel + cropped mockup, name and description below); comparison; a dense review wall; FAQ; closing CTA. Whole page 7,747px at 1440x900. | Section rhythm, still-layer depth, evidence after emotion, proof inside the first fold, compact feature grid, review density, warm purposeful palettes. | No Unive name, copy, school setting, people, logos, proprietary UI, or artwork. Aster uses an observatory world, its own product model, and original graphics. |
 
 ## Reference contrast after rendered QA
 
@@ -28,6 +28,16 @@ For curious people facing an uncertain next step, Aster feels like a warm observ
 | Media coherence | One cohesive scenic composition hides the mechanics of its depth treatment. | Separate alpha planes exposed their construction when focal objects shared the copy zone. | Give horizon, architecture, and foreground distinct resting positions and narrower motion ranges; composition must work before parallax. |
 | Visual language | Restrained monochrome interface and one pastoral metaphor foreground the product claim. | Warm editorial typography, multiple accent colors, and fantasy scenery competed at equal intensity. | Keep Aster's more expressive observatory identity, but ration coral and use quieter product-section typography and spacing. |
 
+## Second cross-reference, after measuring the reference
+
+| Design subject | Unive measurement | Aster v2 defect | Aster decision |
+|---|---|---|---|
+| Page budget | 7,747px total at 1440x900. | 13,062px — six full-bleed feature worlds spent ~6,000px on content the reference delivered in 1,359px. | Collapse the six worlds into one 3x2 grid. Page now 9,387px, with the expressive hero and review density intact. |
+| Feature anatomy | 389x447 card: tinted panel, product mockup cropped by the panel edge, then name and 3-line description below. | Alternating left/right copy beside a 640px stage, one section each. | Adopt the card anatomy verbatim in structure; keep Aster's original stages and palette as the content. |
+| Hero height | `h-[94dvh]` — viewport-relative, so the landscape meets the fold at any height. | Fixed 1080px; at 1280x720 only 338px of artwork was visible and the proof bar never entered the first fold. | Track viewport height with `clamp(980px, calc(880px + 24svh), 1130px)`, verified so the artwork clears the CTA at every tested viewport. |
+| Social proof placement | Rating pill sits above the headline. | Rating lockup sat at the hero's base, 1,032px down — below the fold at every desktop size. | Move the rating to a pill above the headline; leave the press row over the artwork. |
+| Review volume | ~17 short reviews in a dense multi-column wall. | Four large cards in a horizontal rail. | A 12-review, three-column masonry wall with one featured card. |
+
 ## High-impact system
 
 ### Composition and responsive behavior
@@ -36,7 +46,9 @@ For curious people facing an uncertain next step, Aster feels like a warm observ
 - Content width: 1180px; editorial copy measures 12–18 words per line.
 - The hero art breaks the content container but preserves a center path and stable copy-safe upper field.
 - Desktop uses three panorama layers. Narrow screens use the same alpha masters with stronger center cropping and reduced movement; production reuse can replace them through `<picture>` without changing markup.
-- Product proof alternates between wide evidence and focused feature worlds rather than repeating a card grid.
+- Product proof runs wide first (the dashboard), then compact: six features in a 3x2 grid of tinted panels, each holding one scaled product stage above its name and description.
+- Each feature stage is authored at a fixed 620x560 and scaled into its card through `--stage-scale`, so stage internals never need re-tuning per breakpoint.
+- Social proof appears twice: a rating pill above the headline (always inside the first fold) and a press row over the artwork at the hero's base.
 
 ### Typography
 
@@ -63,7 +75,14 @@ For curious people facing an uncertain next step, Aster feels like a warm observ
 
 ## Proof
 
-- Default viewport: 1440×900.
-- Minimum viewport: 390×844.
-- Alternate state: reduced motion.
-- Pass conditions: no horizontal overflow; readable first action; hero path/focal point visible; all product labels exact; FAQ keyboard-operable; animations preserve final content; decorative media does not carry unique meaning.
+Checked at 1440×900, 1440×780, 1280×720, 1280×633, 834×1112, 390×844, and 320×568.
+
+Pass conditions, all currently green:
+
+- No horizontal overflow at any viewport or scroll depth.
+- The primary action sits inside the first fold.
+- The hero artwork reaches the fold and its opaque mass clears the action row (measured by alpha sampling, not bounding box — the panoramas carry wide transparent margins).
+- Navigation is reachable at every width; below 1000px through a menu that opens, closes on Escape, on link choice, and on outside click.
+- FAQ is keyboard-operable; no decorative control sits in the tab order.
+- Reduced motion leaves no revealed element stranded at zero opacity.
+- No console errors and no failing requests across a full-page scroll.
