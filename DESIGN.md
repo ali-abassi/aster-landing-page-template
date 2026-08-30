@@ -18,6 +18,16 @@ For curious people facing an uncertain next step, Aster feels like a warm observ
 |---|---|---|---|
 | https://unive.ai/ | Layered panoramic hero, restrained parallax, local proof scrim, deterministic dashboard, alternating feature worlds, comparison, reviews, FAQ, closing CTA. | Section rhythm, still-layer depth, evidence after emotion, purposeful warm palettes. | No Unive name, copy, school setting, people, logos, proprietary UI, or artwork. Aster uses an observatory world, different hierarchy, different product model, and original graphics. |
 
+## Reference contrast after rendered QA
+
+| Design subject | Unive observation | Aster v1 defect | Aster decision |
+|---|---|---|---|
+| Hero reading aperture | The central headline, support line, and action sit entirely above the detailed landscape. | The observatory dome climbed into the lede and secondary action. | Lower the architectural plane, keep the horizon below the action row, and reserve the upper field for live copy. |
+| Scale hierarchy | Display type is large once, then settles to a materially smaller product-section scale. | Three consecutive sections repeated near-hero headline scale. | Preserve the expressive hero, compress the promise into a bridge band, and cap the workspace heading at 4.75rem. |
+| Proof cadence | Emotional scenery hands off quickly to a concise platform introduction and product screenshot. | The promise section delayed the dashboard with another near-full-screen statement. | Reduce bridge padding and dashboard offset so product evidence enters the next viewport. |
+| Media coherence | One cohesive scenic composition hides the mechanics of its depth treatment. | Separate alpha planes exposed their construction when focal objects shared the copy zone. | Give horizon, architecture, and foreground distinct resting positions and narrower motion ranges; composition must work before parallax. |
+| Visual language | Restrained monochrome interface and one pastoral metaphor foreground the product claim. | Warm editorial typography, multiple accent colors, and fantasy scenery competed at equal intensity. | Keep Aster's more expressive observatory identity, but ration coral and use quieter product-section typography and spacing. |
+
 ## High-impact system
 
 ### Composition and responsive behavior
@@ -57,4 +67,3 @@ For curious people facing an uncertain next step, Aster feels like a warm observ
 - Minimum viewport: 390×844.
 - Alternate state: reduced motion.
 - Pass conditions: no horizontal overflow; readable first action; hero path/focal point visible; all product labels exact; FAQ keyboard-operable; animations preserve final content; decorative media does not carry unique meaning.
-
