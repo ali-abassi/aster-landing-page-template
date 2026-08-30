@@ -12,11 +12,11 @@ A reusable marketing homepage built around layered alpha artwork and restrained 
 
 | | |
 |---|---|
-| **Hero** | Three-layer parallax panorama with a copy-safe reading aperture that tracks viewport height |
+| **Hero** | Three-layer parallax panorama, a rating pill above the headline, and a copy-safe reading aperture that tracks viewport height |
 | **Product proof** | A deterministic dashboard mockup in pure HTML/CSS — no screenshots to re-render when your copy changes |
-| **Six feature worlds** | Alternating full-bleed sections, each with an original CSS/SVG stage |
+| **Six feature cards** | A 3×2 grid of tinted panels, each holding an original CSS/SVG product stage above its name and description |
 | **Comparison table** | Three-column positioning grid, horizontally scrollable on mobile |
-| **Stories, FAQ, closing CTA** | Testimonial rail, keyboard-operable `<details>` accordion, starfield close |
+| **Reviews, FAQ, closing CTA** | Twelve-review masonry wall, keyboard-operable `<details>` accordion, starfield close |
 | **Responsive nav** | Full links on desktop, an accessible dropdown menu below 1000px |
 
 Accessibility: skip link, visible focus rings, `prefers-reduced-motion` honoured throughout, no decorative controls in the tab order, and no meaning carried only by imagery.
@@ -56,16 +56,19 @@ Work through these five in order. The first two get you 90% of the way.
   --sans: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
   --wrap: 1180px;
   --radius-sm: 14px;  --radius-md: 24px;  --radius-lg: 36px;
-  --hero-h: clamp(940px, calc(824px + 24svh), 1080px);
-  --hero-copy-top: clamp(112px, 15.8svh, 142px);
+  --hero-h: clamp(980px, calc(880px + 24svh), 1130px);
+  --hero-copy-top: clamp(92px, 13svh, 120px);
+  --stage-scale: 0.53;   /* feature stages scale into their cards */
 }
 ```
 
 The default type stack is deliberately system-only — no font request, no layout shift, no third-party origin. Swap in a webfont if you want, but you are trading away the fastest first paint the template has.
 
-**3. Hero artwork.** Replace the three `assets/hero-*.webp` masters, keeping the filenames. They are transparent PNG-sourced panoramas exported to WebP at 2172×724. Keep the subject mass in the lower two-thirds — the upper field is reserved for live copy. `--hero-h` controls how much artwork meets the fold; raise the `24svh` coefficient for more, lower it for less.
+**3. Hero artwork.** Replace the three `assets/hero-*.webp` masters, keeping the filenames. They are transparent PNG-sourced panoramas exported to WebP at 2172×724. Keep the subject mass in the lower two-thirds — the upper field is reserved for live copy. `--hero-h` controls how much artwork meets the fold; raise the `24svh` coefficient for more, lower it for less. Each feature stage is authored at a fixed 620×560 and scaled into its card by `--stage-scale`, so you tune one number rather than six layouts.
 
-**4. Copy and links.** Placeholder destinations are marked `data-placeholder-link` in the footer — grep for it and point each one somewhere real before launch. The press names, star ratings, review counts, and testimonials are fictional; replace them with claims you can actually support.
+**4. Copy and links.** Placeholder destinations are marked `data-placeholder-link` in the footer — grep for it and point each one somewhere real before launch.
+
+> **Everything that looks like proof is invented.** The mastheads, the 4.9/5 rating, the review count, and all twelve testimonials are fictional placeholders. Replace them with claims you can actually support, or delete those blocks — shipping them as-is would be fabricating endorsements.
 
 **5. Motion.** Add or remove `data-reveal` and `data-parallax` attributes freely; the engine in `script.js` reads them at load and needs no registration. Everything animates on `transform`/`opacity` only, with a zero-motion final state.
 
@@ -75,7 +78,7 @@ The default type stack is deliberately system-only — no font request, no layou
 
 ## Provenance
 
-An original design study. The section rhythm — emotional hero, fast handoff to product evidence, alternating feature worlds, comparison, reviews, FAQ, closing CTA — is a widely used marketing structure, informed here by studying [unive.ai](https://unive.ai). No Unive copy, artwork, UI, branding, or proprietary assets are reproduced; Aster is a fictional product with its own world, palette, hierarchy, and graphics.
+An original design study. The section rhythm — emotional hero, fast handoff to product evidence, a compact feature grid, comparison, reviews, FAQ, closing CTA — is a widely used marketing structure, informed here by studying [unive.ai](https://unive.ai). No Unive copy, artwork, UI, branding, or proprietary assets are reproduced; Aster is a fictional product with its own world, palette, hierarchy, and graphics.
 
 ## License
 
