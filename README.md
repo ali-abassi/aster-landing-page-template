@@ -33,9 +33,11 @@ It is deliberately plain HTML, CSS, and one short script. Open `index.html` in a
 <details open>
 <summary><b>Hero</b> — three-layer parallax panorama, rating pill, press row</summary>
 
-![Hero](evidence/01-hero.jpg)
+Three transparent panorama layers drift at different rates over a warm gradient. The rating pill sits above the headline so social proof is always inside the first fold. Hero height tracks the viewport, so the landscape meets the fold on a short laptop as well as a tall monitor.
 
-Three transparent panorama layers drift at different rates over a warm gradient. The rating pill sits above the headline so social proof is always inside the first fold, and the press row sits over the artwork at the hero's base. Hero height tracks the viewport, so the landscape meets the fold on a short laptop as well as a tall monitor.
+Part-scrolled, with the layers separated and the press row over the artwork:
+
+![Hero mid-scroll](evidence/01b-hero-parallax.jpg)
 </details>
 
 <details>
