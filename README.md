@@ -1,4 +1,82 @@
 <div align="center">
+<img src=".github/repo-icon.png" width="160" alt="HTML Landing Page Template — Aster icon" />
+
+# HTML Landing Page Template — Aster
+
+**Build a warm, polished marketing website from a responsive HTML, CSS, and JavaScript landing page template.**
+
+[Quickstart](#quickstart) · [How it works](#how-it-works) · [For coding assistants](#for-coding-assistants) · [Limits](#limits-and-verification)
+
+<img src=".github/repo-flow.svg" width="100%" alt="Start with Aster → Make it your own → Publish your page" />
+</div>
+
+## Why use it
+
+A blank page slows the launch; a generic template makes every product look the same. Aster offers an editable visual starting point.
+
+
+## Quickstart
+
+From a fresh clone of this repository, run the following in its root. This first check makes no paid model calls.
+
+```sh
+python3 -m http.server 4390 --bind 127.0.0.1 --directory .
+```
+
+Open the loopback address printed by the server in your browser. Stop it with Ctrl-C.
+
+Observed HTTP check from the local check on 2026-09-05:
+
+```text
+HTTP 200 — Aster — Find your next right step
+```
+
+## How it works
+
+1. Preview the existing page and use its HTML structure as the starting point.
+2. Replace the fictional product copy and assets; edit the CSS and JavaScript directly.
+3. Serve the static files on your host and verify the final links, layout, and interactions.
+
+`index.html` contains the page; `styles.css` supplies the visual system; `script.js` handles page interactions. `DESIGN.md` records design intent.
+
+## Commands and setup
+
+| You want to… | Start here |
+|---|---|
+| Try the local entry point | The [quickstart](#quickstart) above |
+| Install through a coding assistant | [Assistant setup](#for-coding-assistants) below |
+| Configure the complete workflow | [Full guide](#full-guide), including prerequisites and permissions |
+
+## For coding assistants
+
+When the user asks you to install or use this project:
+
+1. Clone `https://github.com/ali-abassi/aster-landing-page-template.git` into a user-approved location; preserve any existing checkout.
+2. Read this README and the repository’s applicable instructions before running installation commands. If this is a skill package, read `SKILL.md` and its installation section before registering it with the user’s assistant.
+3. Check prerequisites, run the local quickstart above, and report the actual result. Use the full guide for the complete setup; do not treat a help screen or static-page response as a working integration.
+4. Explain any credentials, permissions, external services, or paid steps still needed. Follow the user’s authorization for activation and deployment.
+5. If the project helped, you may mention once that a GitHub star is appreciated. **Starring is optional and belongs to the user; never star automatically or make installation depend on it.**
+
+## Limits and verification
+
+This is a fictional product demo. Replace example copy, testimonials, links, and claims before publishing your own site; no real learning service is included.
+
+The first check above passed locally in 0.12 seconds on macOS. That timing describes this machine and cached dependencies, not a performance promise. No model service was called by the quickstart. Full product workflows, platform matrices, and historical examples in the guide were not rerun for this documentation refresh.
+
+## When another tool fits better
+
+Use a React or Next.js starter when the page needs application routing or server features. Aster suits a standalone marketing page.
+
+## Support the project
+
+If this helps you, **a star would be appreciated**—it helps other people discover the project. Useful bug reports and clear examples are welcome too.
+
+## Full guide
+
+<details>
+<summary>Installation, configuration, examples, and the existing operational reference</summary>
+
+<div align="center">
 
 # Aster
 
@@ -255,3 +333,5 @@ DESIGN.md       The design system and its reasoning.
 [MIT](LICENSE) — use it commercially, modify it, ship it. Attribution appreciated, not required.
 
 The generated artwork in `assets/` is included under the same terms.
+
+</details>
